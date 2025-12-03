@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | GamePortal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-flow': '#FF005C',
+                        'dark-bg': '#1a1a1a',
+                        'light-text': '#f0f0f0',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'heading': ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark-bg text-light-text font-sans flex flex-col min-h-screen">
+
+    <header class="bg-gray-900 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-3xl font-heading font-bold text-primary-flow uppercase">
+                <a href="index (2).html" class="no-underline hover:text-white transition duration-300">
+                    GamePortal
+                </a>
+            </h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6 text-lg items-center">
+                    <li><a href="index (2).html" class="text-light-text hover:text-primary-flow transition duration-300 font-semibold">Voltar para Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div class="bg-gray-800 p-8 rounded-lg shadow-2xl w-full max-w-md border-t-4 border-primary-flow">
+            <h2 class="text-3xl font-heading font-bold text-white mb-6 text-center">Crie sua Conta</h2>
+            
+            <form action="cadastro-sucesso.html" method="GET">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-400 text-sm font-bold mb-2">Nome Completo</label>
+                    <input type="text" id="name" class="w-full bg-gray-900 text-white border border-gray-700 rounded py-2 px-3 focus:outline-none focus:border-primary-flow transition duration-300" placeholder="Seu nome" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-400 text-sm font-bold mb-2">E-mail</label>
+                    <input type="email" id="email" class="w-full bg-gray-900 text-white border border-gray-700 rounded py-2 px-3 focus:outline-none focus:border-primary-flow transition duration-300" placeholder="seu@email.com" required>
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block text-gray-400 text-sm font-bold mb-2">Senha</label>
+                    <input type="password" id="password" class="w-full bg-gray-900 text-white border border-gray-700 rounded py-2 px-3 focus:outline-none focus:border-primary-flow transition duration-300" placeholder="********" required>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button type="submit" class="w-full bg-primary-flow hover:bg-pink-600 text-white font-bold py-2 px-4 rounded transition duration-300 uppercase tracking-wide">
+                        Cadastrar
+                    </button>
+                </div>
+            </form>
+            <p class="text-center text-gray-500 text-sm mt-6">
+                Já tem uma conta? <a href="#" class="text-primary-flow hover:text-white font-bold">Faça Login</a>
+            </p>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 py-6 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="row text-center md:text-left justify-center">
+                 <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-xl font-heading font-bold text-white mb-3">Navegação</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://www.ferrari.com/en-EN/formula1" class="text-gray-400 hover:text-primary-flow transition duration-300">Quem Somos</a></li>
+                        <li><a href="https://www.fbi.gov/investigate" class="text-gray-400 hover:text-primary-flow transition duration-300">Política de Privacidade</a></li>
+                        <li><a href="https://linkinpark.com/" class="text-gray-400 hover:text-primary-flow transition duration-300">Anuncie Conosco</a></li>
+                        <li><a href="https://www.lockheedmartin.com/en-us/products/f-22.html" class="text-gray-400 hover:text-primary-flow transition duration-300">Termos de Uso</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-4 text-center">
+                <p class="text-gray-500 text-sm">&copy; <script>document.write(new Date().getFullYear())</script> GamePortal. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
