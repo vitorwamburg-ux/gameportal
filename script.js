@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const MATRIX_IMG = "imagens/matrix.jpeg";  
         const KONAMI_IMG = "imagens/ziom.jpg";   
         
-        const DEFTONES_MP3 = "imagens/bleed.mp3";     
+        const DEFTONES_MP3 = "imagens/risk.mp3";     
         const CHESTER_MP3 = "imagens/what.mp3"; // Coloque aqui o MP3 do Linkin Park
         
         // -------------------------------------------------
@@ -241,5 +241,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })();
 
 });
+
 
 
