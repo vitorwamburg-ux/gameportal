@@ -184,3 +184,74 @@ html.effect-invert {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+/* ------------------------------------------- */
+/* 3. Estilos Específicos do QUIZ              */
+/* ------------------------------------------- */
+
+.quiz-option {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    background-color: #262626;
+    color: #f0f0f0;
+    border: 1px solid #333;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.quiz-option:hover:not(:disabled) {
+    background-color: #333;
+    border-color: #FF005C;
+    transform: translateX(5px);
+}
+
+/* Resposta Correta */
+.quiz-option.correct {
+    background-color: rgba(16, 185, 129, 0.2) !important;
+    border-color: #10B981 !important;
+    color: #10B981 !important;
+    font-weight: bold;
+}
+
+/* Resposta Errada */
+.quiz-option.wrong {
+    background-color: rgba(239, 68, 68, 0.2) !important;
+    border-color: #EF4444 !important;
+    color: #EF4444 !important;
+    opacity: 0.7;
+}
+
+/* Bloqueado após resposta */
+.quiz-option:disabled {
+    cursor: default;
+    opacity: 0.6;
+}
+
+/* Animação do Resultado */
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* atualizaçao
+/* --- TELA DE FEEDBACK (QUIZ) --- */
+
+/* Animação de entrada do modal */
+#error-overlay:not(.hidden) {
+    animation: fadeInOverlay 0.3s ease-out forwards;
+}
+
+@keyframes fadeInOverlay {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Efeito de destaque no botão de erro */
+#close-error-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+}
