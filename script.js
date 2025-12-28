@@ -318,28 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 document.addEventListener('DOMContentLoaded', () => {
     
-    /* -----------------------------------------------------------
-       1. MENU MOBILE
-    ----------------------------------------------------------- */
-    const mobileBtn = document.querySelector('button[aria-label="Abrir menu de navegação"]');
-    const navMenu = document.querySelector('nav');
-    const navList = navMenu ? navMenu.querySelector('ul') : null;
-
-    if (mobileBtn && navMenu && navList) {
-        mobileBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('hidden');
-            if (!navMenu.classList.contains('hidden')) {
-                navMenu.classList.add('absolute', 'top-full', 'left-0', 'w-full', 'bg-gray-900', 'shadow-xl', 'z-40', 'pb-5');
-                navList.classList.remove('flex-row', 'space-x-6');
-                navList.classList.add('flex-col', 'space-y-4', 'items-center', 'pt-4');
-            } else {
-                navMenu.classList.remove('absolute', 'top-full', 'left-0', 'w-full', 'bg-gray-900', 'shadow-xl', 'z-40', 'pb-5');
-                navList.classList.add('flex-row', 'space-x-6');
-                navList.classList.remove('flex-col', 'space-y-4', 'items-center', 'pt-4');
-            }
-        });
-    }
-
+    
     /* -----------------------------------------------------------
        2. EASTER EGGS (Simplificado para o exemplo)
     ----------------------------------------------------------- */
@@ -700,3 +679,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
