@@ -1,23 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     /* -----------------------------------------------------------
-       1. MENU MOBILE (Original - Mantido)
+       1. MENU MOBILE (CORRIGIDO)
     ----------------------------------------------------------- */
     const mobileBtn = document.querySelector('button[aria-label="Abrir menu de navegação"]');
-    const navMenu = document.querySelector('nav');
+    
+    // CORREÇÃO: Seleciona especificamente o menu que tem a classe de ocultar em desktop (md:hidden)
+    // Ou pega todos os 'nav' e seleciona o segundo (índice 1), que é o padrão do seu site.
+    const allNavs = document.querySelectorAll('nav');
+    const navMenu = allNavs.length > 1 ? allNavs[1] : document.querySelector('nav.md\\:hidden');
+    
     const navList = navMenu ? navMenu.querySelector('ul') : null;
 
     if (mobileBtn && navMenu && navList) {
         mobileBtn.addEventListener('click', () => {
             navMenu.classList.toggle('hidden');
+            
+            // Lógica visual para garantir que o menu apareça corretamente
             if (!navMenu.classList.contains('hidden')) {
-                navMenu.classList.add('absolute', 'top-full', 'left-0', 'w-full', 'bg-gray-900', 'shadow-xl', 'z-40', 'pb-5');
-                navList.classList.remove('flex-row', 'space-x-6');
-                navList.classList.add('flex-col', 'space-y-4', 'items-center', 'pt-4');
+                // Menu ABERTO
+                navMenu.classList.remove('hidden');
+                // Garante classes de estilo vertical
+                navList.classList.add('flex', 'flex-col', 'space-y-4', 'text-center', 'p-4');
+                navList.classList.remove('hidden'); 
             } else {
-                navMenu.classList.remove('absolute', 'top-full', 'left-0', 'w-full', 'bg-gray-900', 'shadow-xl', 'z-40', 'pb-5');
-                navList.classList.add('flex-row', 'space-x-6');
-                navList.classList.remove('flex-col', 'space-y-4', 'items-center', 'pt-4');
+                // Menu FECHADO
+                navMenu.classList.add('hidden');
             }
         });
     }
@@ -690,4 +698,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
 });
