@@ -40,18 +40,16 @@
             <a href="index.html" class="text-2xl font-heading font-bold text-white tracking-wider hover:text-primary-flow transition duration-300 decoration-0">
                 GAME<span class="text-primary-flow">PORTAL</span>
             </a>
-             <nav class="hidden md:flex">
-                <ul class="flex space-x-6">
-                    <li><a href="index.html" class="text-light-text hover:text-primary-flow transition duration-300 font-semibold">Home</a></li>
-                    <li><a href="noticias.html" class="text-light-text hover:text-primary-flow transition duration-300 font-semibold">Notícias</a></li>
-                    <li><a href="reviews.html" class="text-light-text hover:text-primary-flow transition duration-300 font-semibold">Reviews</a></li>
-                    <li><a href="https://mibr.gg/" class="text-light-text hover:text-primary-flow transition duration-300 font-semibold">eSports</a></li>
-                    <li><a href="https://bonoxs.com/" class="text-light-text hover:text-primary-flow transition duration-300 font-semibold">Compras</a></li>
-                </ul>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-light-text hover:text-primary-flow transition duration-300 font-semibold">Home</a>
+                <a href="noticias.html" class="text-light-text hover:text-primary-flow transition duration-300 font-semibold">Notícias</a></li>
+                <a href="reviews.html" class="text-light-text hover:text-primary-flow transition duration-300 font-semibold">Reviews</a></li>
+                <a href="https://mibr.gg/" class="text-light-text hover:text-primary-flow transition duration-300 font-semibold">eSports</a></li>
+                <a href="https://bonoxs.com/" class="text-light-text hover:text-primary-flow transition duration-300 font-semibold">Compras</a></li>
             </nav>
-            <div class="hidden md:flex items-center space-x-4">
-                <a href="cadastro.html" class="bg-primary-flow hover:bg-pink-700 text-white px-5 py-2 rounded-full font-bold transition duration-300 text-sm shadow-lg shadow-pink-500/30 no-underline">
-                    CADASTRO
+            <div class="hidden md:block">
+                <a href="cadastro.html" class="bg-primary-flow hover:bg-pink-700 text-white px-4 py-2 rounded font-bold text-sm transition transform hover:scale-105 decoration-0">
+                    Login / Cadastro
                 </a>
             </div>
             <button class="md:hidden text-white focus:outline-none" aria-label="Abrir menu de navegação">
@@ -60,6 +58,17 @@
                 </svg>
             </button>
         </div>
+
+        <!-- Menu Mobile (Faltava este bloco) -->
+        <nav class="hidden md:hidden bg-gray-900 border-t border-gray-800">
+            <ul class="flex flex-col p-4 space-y-4 text-center">
+                <li><a href="index.html" class="block hover:text-primary-flow py-2 decoration-0">Home</a></li>
+                <li><a href="noticias.html" class="block hover:text-primary-flow py-2 decoration-0">Notícias</a></li>
+                <li><a href="reviews.html" class="block hover:text-primary-flow py-2 decoration-0">Reviews</a></li>
+                <li><a href="quiz.html" class="block text-primary-flow font-bold py-2 decoration-0">Quiz</a></li>
+                <li><a href="cadastro.html" class="inline-block bg-primary-flow text-white px-6 py-2 rounded-full font-bold mt-2 decoration-0">CADASTRO</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- BANNER TOPO -->
@@ -282,4 +291,5 @@
         </div>
     </div>
 </body>
+
 </html>
